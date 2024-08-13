@@ -505,6 +505,7 @@
 
 <!-- link swiper file -->
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    
    <script>
        //Prevent right click
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -513,9 +514,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         alert('Right-click is disabled on this page.');
     });
 });
-</script>
 
-<script>
     //Prevent F12
 document.addEventListener('keydown', function(e) {
     if (e.key === 'F12') {
@@ -523,9 +522,7 @@ document.addEventListener('keydown', function(e) {
         alert('Not Allowed Bro.');
     }
 });
-</script>
-    
-    <script>
+
         //Prevent copy & cut
 document.addEventListener('DOMContentLoaded', (event) => {
     document.addEventListener('copy', function(e) {
@@ -537,10 +534,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         alert('Cutting is disabled on this page.');
     });
 });
-</script>
 
-
-    <script>
         //Prevent ctrl c
 document.addEventListener('DOMContentLoaded', (event) => {
     document.addEventListener('keydown', function(e) {
@@ -552,9 +546,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 });
-</script>
 
-    <script>
          //Prevent ctrl x
 document.addEventListener('DOMContentLoaded', (event) => {
     document.addEventListener('keydown', function(e) {
@@ -566,10 +558,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 });
-</script>
 
-
-    <script>
          //Prevent ctrl v
 document.addEventListener('DOMContentLoaded', (event) => {
     document.addEventListener('keydown', function(e) {
@@ -581,10 +570,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 });
-</script>
 
-
-    <script>
          //Prevent ctrl a
 document.addEventListener('DOMContentLoaded', (event) => {
     document.addEventListener('keydown', function(e) {
@@ -596,15 +582,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 });
-</script>
 
-
-    <script>
          //Prevent ctrl u
 document.addEventListener('DOMContentLoaded', (event) => {
     document.addEventListener('keydown', function(e) {
         if (e.ctrlKey || e.metaKey) {
-            if (['u''].includes(e.key.toLowerCase())) {
+            if (['u'].includes(e.key.toLowerCase())) {
                 e.preventDefault();
                 alert(`I can see you`);
             }
