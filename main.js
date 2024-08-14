@@ -1,15 +1,17 @@
-let menu = document.querySelector('#menu-bars');
-let navbar = document.querySelector('.navbar');
+let menu;
+let navbar;
 
 $(document).ready(function(){
     $('#header').load("header.html");
     //$('#footer').load("footer.html");
 
-    //dsdsda
-    menu.onclick = () =>{
-      menu.classList.toggle('fa-times');
-      navbar.classList.toggle('active');
-    }
+    // menu = document.querySelector('#menu-bars');
+    // navbar = document.querySelector('.navbar');
+
+    // menu.onclick = () =>{
+    //   menu.classList.toggle('fa-times');
+    //   navbar.classList.toggle('active');
+    // }
 });
 
 
