@@ -51,20 +51,36 @@
 
     <script>
       // Paste here        
-     var sources = [{
-            file: "https://bldcmprod-cdn.toffeelive.com/cdn/live/b4u_movies/playlist.m3u8",
-            image: "https://images.toffeelive.com/images/program/366/logo/240x240/mobile_logo_702115001663003759.png",
-            title: "B4U Movies VIP"
-        }];
+    // Function to set a cookie
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
 
-        // Simplified JW Player setup
+        // Set the necessary cookie
+        setCookie("Edge-Cache-Cookie", "URLPrefix=aHR0cHM6Ly9ibGRjbXByb2QtY2RuLnRvZmZlZWxpdmUuY29tLw:Expires=1723442835:KeyName=prod_linear:Signature=Uwnx6A9YUIjzUjGBUF_M6B3VQ2jzB52ul6eCzss7fjHkHwIYQUSDvKFholcQzbQWzJv40bOknWWjUErrnw6aBg", 7);  // Set cookie for 7 days
+
+        // JW Player setup
         jwplayer("player").setup({
             playlist: [{
-                sources: sources
+                file: "https://bldcmprod-cdn.toffeelive.com/cdn/live/b4u_movies/playlist.m3u8",
+                image: "https://images.toffeelive.com/images/program/366/logo/240x240/mobile_logo_702115001663003759.png",
+                title: "B4U Movies VIP"
             }],
             autostart: true,
             width: "100%",
             height: "100%",
+            hlsjsConfig: {
+                xhrSetup: function (xhr, url) {
+                    xhr.setRequestHeader("Referer", "PiratesTV");  // Custom referer
+                    xhr.withCredentials = true;  // Enable cookies for cross-origin requests
+                }
+            }
         });
        </script>
 
