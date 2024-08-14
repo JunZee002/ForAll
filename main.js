@@ -5,6 +5,7 @@ $(document).ready(function(){
     $('#header').load("header.html");
     //$('#footer').load("footer.html");
 
+    
     menu.onclick = () =>{
       menu.classList.toggle('fa-times');
       navbar.classList.toggle('active');
