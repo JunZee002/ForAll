@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <a href="#" class="logo"><i class="fas fa-infinity"></i>TV.</a>
             <nav class="navbar">
                 <a class="active" href="https://tv.freeforall.rf.gd">home</a>
-                <a href="#BD Channels">BD</a>
+                <a href="BD.html">BD</a>
                 <a href="#IN Channels">IN</a>
                 <a href="#Infotainment">Infotainment</a>
                 <a href="#Kids Channels">Kids</a>
