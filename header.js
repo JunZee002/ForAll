@@ -1,4 +1,4 @@
-// header.js
+// header.jss
 
 document.addEventListener('DOMContentLoaded', () => {
     const header = `
