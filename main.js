@@ -1,10 +1,17 @@
 let menu = document.querySelector('#menu-bars');
 let navbar = document.querySelector('.navbar');
 
-menu.onclick = () =>{
-  menu.classList.toggle('fa-times');
-  navbar.classList.toggle('active');
-}
+$(document).ready(function(){
+    $('#header').load("header.html");
+    //$('#footer').load("footer.html");
+
+    menu.onclick = () =>{
+      menu.classList.toggle('fa-times');
+      navbar.classList.toggle('active');
+    }
+});
+
+
 
 
 var swiper = new Swiper(".home-slider", {
