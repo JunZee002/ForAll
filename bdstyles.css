@@ -15,7 +15,6 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: flex-start; /* Align items at the start of the container */
 }
 
 .movie-card {
@@ -26,14 +25,11 @@ h1 {
     overflow: hidden;
     transition: transform 0.3s;
     position: relative;
-    height: auto; /* Set height to auto to avoid unnecessary stretching */
-    display: flex;
-    flex-direction: column;
 }
 
 .movie-card img {
     width: 100%;
-    height: auto; /* Ensure image does not stretch vertically */
+    height: auto;
     display: block;
 }
 
