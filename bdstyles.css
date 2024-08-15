@@ -15,7 +15,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: flex-start; /* Ensure items align at the start */
+    
 }
 
 .movie-card {
@@ -27,7 +27,7 @@ h1 {
     transition: transform 0.3s;
     position: relative;
     height: auto; /* Set height to auto to avoid unnecessary stretching */
-    display: flex;
+    
     
 }
 
