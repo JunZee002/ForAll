@@ -45,16 +45,23 @@ header {
     align-items: center;
     justify-content: space-between;
     z-index: 10000;
+    position: fixed; /* Ensure header is fixed on top */
+    background: var(--black); /* Background to ensure visibility */
+    color: #fff; /* Ensure text is visible */
 }
 
 header .logo {
-    color: #fff;
     font-size: 2.5rem;
     font-weight: bolder;
 }
 
 header .logo i {
     color: var(--red);
+}
+
+header .navbar {
+    display: flex;
+    align-items: center;
 }
 
 header .navbar a {
@@ -361,7 +368,7 @@ section:nth-child(even) {
     padding: 12px 20px;
     color: #fff;
     letter-spacing: 1px;
-    font-size: 500;
+    font-size: 1.5rem; /* Corrected font-size */
 }
 
 .downlod-links a:hover {
