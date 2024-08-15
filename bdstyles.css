@@ -14,26 +14,27 @@ h1 {
 .movie-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-around; /* Space out movie cards evenly */
     align-items: flex-start; /* Align items at the start of the container */
 }
 
 .movie-card {
     width: 200px;
+    height: auto; /* Increase height to accommodate content and image */
     margin: 15px;
     background-color: #1a1a1a;
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s;
     position: relative;
-    height: auto; /* Set height to auto to avoid unnecessary stretching */
     display: flex;
     flex-direction: column;
 }
 
 .movie-card img {
     width: 100%;
-    height: auto; /* Ensure image does not stretch vertically */
+    height: 150px; /* Fixed height for the image */
+    object-fit: contain; /* Ensure the entire image is visible */
     display: block;
 }
 
@@ -43,11 +44,15 @@ h1 {
 
 .movie-details {
     padding: 15px;
+    flex: 1; /* Ensure details take up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space between title and additional info */
 }
 
 .movie-details h3 {
     font-size: 16px;
-    margin: 10px 0;
+    margin: 0; /* Remove margin to avoid extra spacing */
 }
 
 .movie-details p {
