@@ -22,10 +22,12 @@
 body{
     background-color:var(--light-color);
 	height: -webkit-fill-available;
+	weight: -webkit-fill-available
 }
 
 html{
     height: -webkit-fill-available;
+	weight: -webkit-fill-available
 }
 
 section{
