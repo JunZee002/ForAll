@@ -1,5 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+:root{
+    --red:#E50914;
+    --black:#000000;
+    --light-color:#181818;
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: Nunito, sans-serif;
     background-color: #141414;
     color: white;
     margin: 0;
@@ -34,13 +45,13 @@ h1 {
 .movie-card img {
     width: 100%;
     height: 150px; /* Fixed height for the image */
-    object-fit: ; /* Ensure the image covers the area without distortion */
+    /* object-fit: cover;  Ensure the image covers the area without distortion */
     display: block;
-    background-color: #fff; /* Background color for the image area */
+    background-color: #000000; /* Background color for the image area */
 }
 
 .movie-card:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    transform: scale(1.05);  Slight zoom effect on hover */
 }
 
 .movie-details {
@@ -54,6 +65,8 @@ h1 {
 
 .movie-details h3 {
     font-size: 16px;
+	text-align: center;
+	text-color: #690f85;
     margin: 0; /* Remove margin to avoid extra spacing */
 }
 
