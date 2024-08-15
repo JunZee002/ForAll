@@ -19,8 +19,8 @@ h1 {
 }
 
 .movie-card {
-    width: 200px;
-    height: auto; /* Increase height to accommodate content and image */
+    width: 300px;
+    height: auto; /* Adjust height to accommodate content and image */
     margin: 15px;
     background-color: #1a1a1a;
     border-radius: 8px;
@@ -34,8 +34,9 @@ h1 {
 .movie-card img {
     width: 100%;
     height: 150px; /* Fixed height for the image */
-    object-fit: contain; /* Ensure the entire image is visible */
+    object-fit: contain; /* Ensure the entire image is visible without zooming */
     display: block;
+    background-color: #fff; /* White background for the image area */
 }
 
 .movie-card:hover {
@@ -48,6 +49,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Distribute space between title and additional info */
+    background-color: #1a1a1a; /* Background color for the details area */
 }
 
 .movie-details h3 {
