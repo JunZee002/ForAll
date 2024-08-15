@@ -21,16 +21,12 @@
 }
 body{
     background-color:var(--light-color);
-	display: flex;
-	flex-direction: column;
-	max-width: 1440px;
-	margin: 0 auto;
-	height: 100vh;
-	height: -webkit-fill-available;
 }
 
 html{
-    height: -webkit-fill-available;
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top:5.5rem;
 }
 
 section{
