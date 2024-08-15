@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Infinity TV</title>
-
-    <link
-  rel="stylesheet"
-  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
-/>
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 
     <!-- font awesome cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+
     <!-- custom css file link -->
     <link rel="stylesheet" href="style.css">
+    <!-- for bd --> 
+     <link rel="stylesheet" href="style_swipe.css">
 
 </head>
 <body>
@@ -566,116 +567,98 @@
 
 
 <!-- Sports section start -->
-
-<section class="family" id="family">
-    <h1 class="heading">Sports Channels</h1>
-    <div class="swiper family-slider">
-    <div class="swiper-wrapper">
-
-        <div class="swiper-slide">
-                <div class="box" style="background: url(https://cdn.comedy.co.uk/images/channels/tnt_sports_1.jpg) no-repeat; cursor: pointer;" onclick="location.href='Sports/TNTSports1.html';"></div>
-                <div class="content" style="text-align: left;">
-                    <h3>TNT Sports 1</h3>
-                    <a href="Sports/TNTSports1.html" class="btn">Watch</a>
+                   <h1 class="heading">Sports Channels</h1>
+    <!-- 8th Swiper Container -->
+    <div class="swiper-container" id="swiper8">
+        <div class="swiper-wrapper">
+            <!-- Swiper Slides -->
+            <div class="swiper-slide">
+                <div class="movie-card">
+                    <div class="badge">Live</div>
+                    <a href="Sports/TNTSports1.html">
+                        <img src="https://cdn.comedy.co.uk/images/channels/tnt_sports_1.jpg" alt="TNT Sports 1">
+                        <div class="movie-details">
+                            <h3>TNT Sports 1</h3>
+                        </div>
+                    </a>
                 </div>
-        </div>
-
-        <div class="swiper-slide">
-            <div class="box" style="background: url(https://cdn.comedy.co.uk/images/channels/tnt_sports_2.jpg) no-repeat; cursor: pointer;" onclick="location.href='Sports/TNTSports2.html';"></div>
-            <div class="content" style="text-align: left;">
-                    <h3>TNT Sports 2</h3>
-                    <a href="Sports/TNTSports2.html" class="btn">Watch</a>
-                </div>
-        </div>
-
-       
-
-
-
-          <div class="swiper-slide">
-                <div class="box" style="background: url(https://media.info/l/o/5/5712.1690027954.png) no-repeat; cursor: pointer;" onclick="location.href='Sports/TNTSports3.html';"></div>
-                <div class="content" style="text-align: left;">
-                    <h3>TNT Sports 3</h3>
-                    <a href="Sports/TNTSports3.html" class="btn">Watch</a>
-                </div>
-        </div>
-
-          <div class="swiper-slide">
-                <div class="box" style="background: url(https://media.info/l/o/1/1491.1690027975.png) no-repeat; cursor: pointer;" onclick="location.href='Sports/TNTSports4.html';"></div>
-                <div class="content" style="text-align: left;">
-                    <h3>TNT Sports 4</h3>
-                    <a href="Sports/TNTSports4.html" class="btn">Watch</a>
-                </div>
-        </div>
-
-          <div class="swiper-slide">
-                <div class="box" style="background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dc534a39-d741-41c6-bd1a-651381b15e99/dfpmqx5-57888dbe-d72c-4bc4-b4fe-f53894c8c78b.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RjNTM0YTM5LWQ3NDEtNDFjNi1iZDFhLTY1MTM4MWIxNWU5OVwvZGZwbXF4NS01Nzg4OGRiZS1kNzJjLTRiYzQtYjRmZS1mNTM4OTRjOGM3OGIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.qhB8ePdkyCuv6Z0K3HCgtHv13GXMk_fWfXoeVxzyI2I) no-repeat; cursor: pointer;" onclick="location.href='Sports/astroCRICKET.html';"></div>
-                <div class="content" style="text-align: left;">
-                    <h3>astro Cricket</h3>
-                    <a href="Sports/astroCRICKET.html" class="btn">Watch</a>
-                </div>
-        </div>
-
-        <div class="swiper-slide">
-            <div class="box" style="background: url(https://www.thesportsdb.com/images/media/channel/logo/3ftgj11637160967.png) no-repeat; cursor: pointer;" onclick="location.href='Sports/SSC1.html';"></div>
-            <div class="content" style="text-align: left;">
-                    <h3>SSC 1</h3>
-                    <a href="Sports/SSC1.html" class="btn">Watch</a>
-        </div>
-           </div>
-
-        
-        <div class="swiper-slide">
-            <div class="box" style="background: url(https://bokulsports.com/upload/channel/20240403_143035.jpg) no-repeat; cursor: pointer;" onclick="location.href='Sports/SSC2.html';"></div>
-            <div class="content" style="text-align: left;">
-                    <h3>SSC 2</h3>
-                    <a href="Sports/SSC2.html" class="btn">Watch</a>
-        </div>
             </div>
-        
-        <div class="swiper-slide">
-            <div class="box" style="background: url(https://bokulsports.com/upload/channel/20240403_143824.jpg) no-repeat; cursor: pointer;" onclick="location.href='Sports/SSC3.html';"></div>
-            <div class="content" style="text-align: left;">
-                    <h3>SSC 3</h3>
-                    <a href="Sports/SSC3.html" class="btn">Watch</a>
-        </div>
+            <!-- Repeat .swiper-slide for other movie cards in this section -->
+			
+			<div class="swiper-slide">
+			<div class="movie-card">
+            <div class="badge">Live</div>
+			<a href="Sports/TNTSports3.html">
+            <img src="https://i.ibb.co/Y8FyJMk/5712.jpg" alt="TNT Sports 3">
+            <div class="movie-details">
+                <h3>TNT Sports 3</h3>             
             </div>
-
-        <div class="swiper-slide">
-            <div class="box" style="background: url(https://bokulsports.com/upload/channel/20240403_144209.jpg) no-repeat; cursor: pointer;" onclick="location.href='Sports/SSC4.html';"></div>
-            <div class="content" style="text-align: left;">
-                    <h3>SSC 4</h3>
-                    <a href="Sports/SSC4.html" class="btn">Watch</a>
-        </div>
+			</a>
             </div>
-
-        <div class="swiper-slide">
-            <div class="box" style="background: url(https://shahid.mbc.net/mediaObject/2022/Kharabsheh2/August/SSCchannels/ssc5/original/ssc5.png?height=379.5&width=675&croppingPoint=&version=1&type=webp) no-repeat; cursor: pointer;" onclick="location.href='Sports/SSC5.html';"></div>
-            <div class="content" style="text-align: left;">
-                    <h3>SSC 5</h3>
-                    <a href="Sports/SSC5.html" class="btn">Watch</a>
+			</div>
+			
+			<div class="swiper-slide">
+			<div class="movie-card">
+            <div class="badge">Live</div>
+			<a href="Sports/SSC1.html">
+            <img src="https://www.thesportsdb.com/images/media/channel/logo/3ftgj11637160967.png" alt="SSC 1">
+            <div class="movie-details">
+                <h3>SSC 1</h3>             
+            </div>
+			</a>
         </div>
+			</div>
+			
+			<div class="swiper-slide">
+			<div class="movie-card">
+            <div class="badge">Live</div>
+			<a href="Sports/SSC5.html">
+            <img src="https://shahid.mbc.net/mediaObject/2022/Kharabsheh2/August/SSCchannels/ssc5/original/ssc5.png" alt="SSC 5">
+            <div class="movie-details">
+                <h3>SSC 5</h3>             
+            </div>
+			</a>
         </div>
-
-        <div class="swiper-slide">
-            <div class="box" style="background: url(https://shahid.mbc.net/mediaObject/2022/Kharabsheh2/August/SSCchannels/EXTRA1/original/EXTRA1.png?height=379.5&width=675&croppingPoint=&version=1&type=web) no-repeat; cursor: pointer;" onclick="location.href='Sports/SSCEXTRA1.html';"></div>
-            <div class="content" style="text-align: left;">
-                    <h3>SSC Extra 1</h3>
-                    <a href="Sports/SSCEXTRA1.html" class="btn">Watch</a>
+			</div>
+			
+			<div class="swiper-slide">
+			<div class="movie-card">
+            <div class="badge">Live</div>
+			<a href="Sports/SSCEXTRA1.html">
+            <img src="https://shahid.mbc.net/mediaObject/2022/Kharabsheh2/August/SSCchannels/EXTRA1/original/EXTRA1.png" alt="SSC Extra 1">
+            <div class="movie-details">
+                <h3>SSC Extra 1</h3>             
+            </div>
+			</a>
+        </div>
+			</div>
+			
+			<div class="swiper-slide">
+			<div class="movie-card">
+            <div class="badge">Live</div>
+			<a href="Sports/TNTSports2.html">
+            <img src="https://cdn.comedy.co.uk/images/channels/tnt_sports_2.jpg" alt="TNT Sports 2">
+            <div class="movie-details">
+                <h3>TNT Sports 2</h3>          
+            </div>
+			</a>
+        </div>
+			</div>
+			
+			<div class="swiper-slide">
+			<div class="movie-card">
+            <div class="badge">Live</div>
+			<a href="Sports/TNTSports3.html">
+            <img src="https://i.ibb.co/Y8FyJMk/5712.jpg" alt="TNT Sports 3">
+            <div class="movie-details">
+                <h3>TNT Sports 3</h3>             
+            </div>
+			</a>
+        </div>
+			</div>
+			
         </div>
     </div>
-
-
-<div class="swiper-slide">
-            <div class="box" style="background: url(https://ethnicchannels.com/images/channeldetail/ten-cricket/ten-ckt-logo.png) no-repeat; cursor: pointer;" onclick="location.href='Sports/TENCRICKET.html';"></div>
-            <div class="content" style="text-align: left;">
-                    <h3>TEN CRICKET</h3>
-                    <a href="Sports/TENCRICKET.html" class="btn">Watch</a>
-        </div>
-    </div>
-        
-    </div>
-</section>
     
 <!-- copyright -->
 <div class="copyright container">
@@ -688,7 +671,9 @@
 
     
 <!-- link swiper file -->
-<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="script_swipe.js"></script>
     
 
 
