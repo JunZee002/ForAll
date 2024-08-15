@@ -147,6 +147,6 @@ const swiper8 = new Swiper('#swiper8', {
         el: '#swiper8 .swiper-pagination',
         clickable: true,
     },
-    slidesPerView: 6, // Number of slides visible at once
+    slidesPerView: 5, // Number of slides visible at once
     spaceBetween: 10, // Space between slides
 });
