@@ -21,13 +21,16 @@
 }
 body{
     background-color:var(--light-color);
+	display: flex;
+	flex-direction: column;
+	max-width: 1440px;
+	margin: 0 auto;
+	height: 100vh;
 	height: -webkit-fill-available;
-	weight: -webkit-fill-available
 }
 
 html{
     height: -webkit-fill-available;
-	weight: -webkit-fill-available
 }
 
 section{
