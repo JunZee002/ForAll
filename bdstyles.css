@@ -28,8 +28,7 @@ h1 {
     position: relative;
     height: auto; /* Set height to auto to avoid unnecessary stretching */
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    
 }
 
 .movie-card img {
