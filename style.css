@@ -139,7 +139,8 @@ section:nth-child(even) {
 }
 
 .movie-card {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: auto; /* Adjust height to accommodate content and image */
     margin: 15px;
     background-color: #1a1a1a;
@@ -242,7 +243,8 @@ section:nth-child(even) {
 }
 
 .anime .box, .action .box, .child .box, .family .box {
-    width: 299px;
+    width: 100%;
+    max-width: 299px;
     height: 168px;
 }
 
@@ -261,7 +263,8 @@ section:nth-child(even) {
 
 .copyright {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
 }
 
@@ -367,7 +370,7 @@ section:nth-child(even) {
     transition: 0.3s all linear;
 }
 
-/* Media queries */
+/* Media Queries */
 @media (max-width: 991px) {
     html {
         font-size: 55%;
@@ -379,6 +382,15 @@ section:nth-child(even) {
 
     section {
         padding: 2rem;
+    }
+
+    .home .box .content {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .home .box .content h3 {
+        font-size: 4rem;
     }
 }
 
@@ -414,10 +426,32 @@ section:nth-child(even) {
     .home .box .content h3 {
         font-size: 5rem;
     }
+
+    .movie-card {
+        width: 100%;
+        max-width: 100%;
+        margin: 10px 0;
+    }
 }
 
 @media (max-width: 450px) {
     html {
         font-size: 50%;
+    }
+
+    .home .box .content h3 {
+        font-size: 3rem;
+    }
+
+    .about h2, .screenshots h2, .download h2 {
+        font-size: 1.8rem;
+    }
+
+    .screenshots-content img {
+        height: auto;
+    }
+
+    .downlod-links {
+        grid-template-columns: 1fr;
     }
 }
