@@ -32,67 +32,48 @@
     <div id="player" class="ViostreamIframe"></div>
 
     <script>
-        var sources = [
-            {
-                "file": "https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/wf8usag51e/out/v1/bd3b0c314fff4bb1ab4693358f3cd2d3/cenc.mpd",
-                "drm": {
-                    "clearkey": {
-                        "keyId": "ae26845bd33038a9c0774a0981007294",
-                        "key": "63ac662dde310cfb4cc6f9b43b34196d"
-                    }
-                }
-            }
-        ];
+        function changeSource(file, keyId = null, key = null) {
+            // Determine the type of source
+            var isM3U8 = file.endsWith('.m3u8');
 
-        jwplayer("player").setup({
-            playlist: [{
-                sources: sources
-            }],
-            autostart: true,
-            width: "100%",
-            height: "100%",
-            cast: {},
-        });
+            var source = {
+                "file": file
+            };
+
+            if (!isM3U8) {
+                source.drm = {
+                    "clearkey": {
+                        "keyId": keyId,
+                        "key": key
+                    }
+                };
+            }
+
+            jwplayer("player").load([{ sources: [source] }]);
+            jwplayer("player").play();
+        }
     </script>
 
-    <!-- custome js file link -->
-    <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest'></script>
-    <script>multilinkdrm.js</script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="main.js"></script>
-    <script src="script.js"></script>
-
-
-<h1 class="heading">TNT Sports 1</h1>
+    <h1 class="heading">TNT Sports 1</h1>
     <div style="text-align: left; margin-top: 20px;">
         <h2>Choose a Stream:</h2>
         <ul id="playLinks">
             <li><a href="" onclick="changeSource('https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/wf8usag51e/out/v1/bd3b0c314fff4bb1ab4693358f3cd2d3/cenc.mpd', 'ae26845bd33038a9c0774a0981007294', '63ac662dde310cfb4cc6f9b43b34196d')">Play_1 - TNT Sports 1</a></li>
             <li><a href="" onclick="changeSource('https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/f0qvkrra8j/out/v1/f8fa17f087564f51aa4d5c700be43ec4/cenc.mpd', '6d1708b185c6c4d7b37600520c7cc93c', '1aace05f58d8edef9697fd52cb09f441')">Play_2 - TNT Sports 2</a></li>
             <li><a href="" onclick="changeSource('https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/lsdasbvglv/out/v1/bb548a3626cd4708afbb94a58d71dce9/cenc.mpd', '4e993aa8c1f295f8b94e8e9e6f6d0bfe', '86a1ed6e96caab8eb1009fe530d2cf4f')">Play_3 - TNT Sports 3</a></li>
-			<li><a href="" onclick="changeSource('https://edge01.iptv.digijadoo.net/live/atn_news/playlist.m3u8?md5=XeQB-_ECdMDBF8g7HN1ERg&expires=1724012166&user=c15be118d93a464dabf77260596012cf')">Play_M3U8 - ATN News</a></li>
-			<li><a href="" onclick="changeSource('https://d75dqofg5kmfk.cloudfront.net/bpk-tv/9XM/default/index.m3u8')">Play_M3U8 - 9XM</a></li>
-        
+            <li><a href="" onclick="changeSource('https://edge01.iptv.digijadoo.net/live/atn_news/playlist.m3u8?md5=XeQB-_ECdMDBF8g7HN1ERg&expires=1724012166&user=c15be118d93a464dabf77260596012cf')">Play_M3U8 - ATN News</a></li>
+            <li><a href="" onclick="changeSource('https://d75dqofg5kmfk.cloudfront.net/bpk-tv/9XM/default/index.m3u8')">Play_M3U8 - 9XM</a></li>
         </ul>
     </div>
 
-    <script>
-        function changeSource(file, keyId, key) {
-            var source = [{
-                "file": file,
-                "drm": {
-                    "clearkey": {
-                        "keyId": keyId,
-                        "key": key
-                    }
-                }
-            }];
-            jwplayer("player").load([{ sources: source }]);
-            jwplayer("player").play();
-        }
-    </script>
+   
 
-    
+    <!-- custom js file link -->
+    <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script src="script.js"></script>
+
 </body>
 
 
