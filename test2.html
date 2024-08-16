@@ -30,24 +30,24 @@
 
     <!-- video -->
     <div id="player" class="ViostreamIframe"></div>
-	<button type="button" onclick="stopPlayer()">Stop player</button>
+    <div id="playerForM3U8" class="ViostreamIframe" style="display: none;"></div>
 
     <script>
-        <!-- var sources = [ -->
-            <!-- { -->
-                <!-- "file": "https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/wf8usag51e/out/v1/bd3b0c314fff4bb1ab4693358f3cd2d3/cenc.mpd", -->
-                <!-- "drm": { -->
-                    <!-- "clearkey": { -->
-                        <!-- "keyId": "ae26845bd33038a9c0774a0981007294", -->
-                        <!-- "key": "63ac662dde310cfb4cc6f9b43b34196d" -->
-                    <!-- } -->
-                <!-- } -->
-            <!-- } -->
-        <!-- ]; -->
+        var sources = [
+            {
+                "file": "https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/wf8usag51e/out/v1/bd3b0c314fff4bb1ab4693358f3cd2d3/cenc.mpd",
+                "drm": {
+                    "clearkey": {
+                        "keyId": "ae26845bd33038a9c0774a0981007294",
+                        "key": "63ac662dde310cfb4cc6f9b43b34196d"
+                    }
+                }
+            }
+        ];
 		
-		var sources = [{
-			"file": 'https://d75dqofg5kmfk.cloudfront.net/bpk-tv/9XM/default/index.m3u8'
-		}];
+		<!-- var sources = [{ -->
+			<!-- "file": 'https://d75dqofg5kmfk.cloudfront.net/bpk-tv/9XM/default/index.m3u8' -->
+		<!-- }]; -->
 
         jwplayer("player").setup({
             playlist: [{
@@ -83,6 +83,10 @@
 
     <script>
         function changeSource(file, keyId, key) {
+			$("#playerForM3U8").stop();
+			$("#playerForM3U8").hide();
+			$("#player").show();
+		
             var source = [{
                 "file": file,
                 "drm": {
@@ -96,18 +100,19 @@
             jwplayer("player").play();
         }
 		
+		
 		function changeSourceForM3U8(file) {
+			$("#player").stop();
+			$("#player").hide();
+			$("#playerForM3U8").show();
+		
             var source = [{
                 "file": file
             }];
 			
 			
-            jwplayer("player").load([{ sources: source }]);
-            jwplayer("player").play();
-        }
-		
-		function stopPlayer() {
-            jwplayer("player").stop();
+            jwplayer("playerForM3U8").load([{ sources: source }]);
+            jwplayer("playerForM3U8").play();
         }
     </script>
 
