@@ -30,6 +30,7 @@
 
     <!-- video -->
     <div id="player" class="ViostreamIframe"></div>
+	<button type="button" onclick="stopPlayer()">Stop player</button>
 
     <script>
         <!-- var sources = [ -->
@@ -103,6 +104,10 @@
 			
             jwplayer("player").load([{ sources: source }]);
             jwplayer("player").play();
+        }
+		
+		function stopPlayer() {
+            jwplayer("player").stop();
         }
     </script>
 
