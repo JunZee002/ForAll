@@ -113,7 +113,7 @@ const swiper6 = new Swiper('#swiper6', {
         el: '#swiper6 .swiper-pagination',
         clickable: true,
     },
-    slidesPerView: 6, // Number of slides visible at once
+    slidesPerView: 5, // Number of slides visible at once
     spaceBetween: 10, // Space between slides
 });
 
@@ -130,7 +130,7 @@ const swiper7 = new Swiper('#swiper7', {
         el: '#swiper7 .swiper-pagination',
         clickable: true,
     },
-    slidesPerView: 6, // Number of slides visible at once
+    slidesPerView: 5, // Number of slides visible at once
     spaceBetween: 10, // Space between slides
 });
 
@@ -147,6 +147,6 @@ const swiper8 = new Swiper('#swiper8', {
         el: '#swiper8 .swiper-pagination',
         clickable: true,
     },
-    slidesPerView: 5, // Number of slides visible at once
+    slidesPerView: 4, // Number of slides visible at once
     spaceBetween: 10, // Space between slides
 });
