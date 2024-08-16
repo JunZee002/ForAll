@@ -182,7 +182,7 @@ section:nth-child(even) {
 .movie-details h3 {
     font-size: 16px;
     text-align: center;
-    color: #690f85;
+    color: #f4f2f5;
     margin: 0; /* Remove margin to avoid extra spacing */
 }
 
