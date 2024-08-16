@@ -454,6 +454,16 @@ section:nth-child(even) {
     transition: 0.3s all linear;
 }
 
+
+
+
+.counter-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+
+
 /* Media Queries */
 @media (max-width: 991px) {
     html {
