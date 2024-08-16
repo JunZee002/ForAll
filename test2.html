@@ -98,6 +98,7 @@
             }];
             jwplayer("player").load([{ sources: source }]);
             jwplayer("player").play();
+			e.preventDefault();
         }
 		
 		
@@ -113,6 +114,7 @@
 			
             jwplayer("playerForM3U8").load([{ sources: source }]);
             jwplayer("playerForM3U8").play();
+			e.preventDefault();
         }
     </script>
 
