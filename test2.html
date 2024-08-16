@@ -95,6 +95,9 @@
             var source = [{
                 "file": file
             }];
+			
+			
+            jwplayer("player").remove();
             jwplayer("player").load([{ sources: source }]);
             jwplayer("player").play();
         }
