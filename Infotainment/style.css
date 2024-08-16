@@ -135,7 +135,17 @@ section:nth-child(even) {
     color: var(--red);
     margin-bottom: 3rem;
     font-size: 4rem;
+	
+
 }
+
+.headinglink {
+    text-align: center;
+    color: var(--green);
+    margin-bottom: 3rem;
+    font-size: 3rem;
+}
+
 
 /* Movie container styles */
 .movie-container {
