@@ -71,11 +71,11 @@ header .navbar a {
     color: #fff;
 }
 
-header .navbar a.active,
+/* header .navbar a.active,
 header .navbar a:hover {
     color: #fff;
     background: var(--red);
-}
+} */
 
 header .icons i,
 header .icons a {
