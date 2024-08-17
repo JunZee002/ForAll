@@ -1,342 +1,551 @@
-@media (min-width: 992px) {
-    /* Import fonts */
-    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
 
-    /* Root variables */
-    :root {
-        --red: #E50914;
-        --black: #000000;
-        --light-color: #181818;
-        --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
-    }
+/* Root variables */
+:root {
+    --red: #E50914;
+    --black: #000000;
+    --light-color: #181818;
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
 
-    /* Global styles */
-    * {
-        font-family: 'Nunito', sans-serif;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        text-decoration: none;
-        outline: none;
-        border: none;
-        text-transform: capitalize;
-        transition: all .2s linear;
-    }
+/* Global styles */
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
 
-    body {
-        background-color: var(--light-color);
-        color: white;
-        margin: 0;
-        padding: 20px;
-    }
+body {
+    background-color: var(--light-color);
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
 
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+}
+
+/* Header styles */
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+    position: fixed; /* Ensure header is fixed on top */
+    background: var(--black); /* Background to ensure visibility */
+    color: #fff; /* Ensure text is visible */
+}
+
+header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+header .logo i {
+    color: var(--red);
+}
+
+header .navbar {
+    display: flex;
+    align-items: center;
+}
+
+header .navbar a {
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: #fff;
+}
+
+ header .navbar a.active,
+header .navbar a:hover {
+    color: #fff;
+    background: var(--red);
+} 
+
+header .icons i,
+header .icons a {
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: #fff;
+    border-radius: 50%;
+    background: var(--red);
+}
+
+header .icons i:hover,
+header .icons a:hover {
+    color: var(--red);
+    background: #fff;
+    transform: rotate(360deg);
+}
+
+header .icons #menu-bars {
+    display: none;
+}
+
+/* Button styles */
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--red);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+
+.btn:hover {
+    background: var(--black);
+    color: var(--red);
+    letter-spacing: .1rem;
+}
+
+/* Section styles */
+section {
+    padding: 2rem 9%;
+}
+
+section:nth-child(even) {
+    background: var(--light-color);
+}
+
+/* Heading styles */
+.heading {
+    text-align: center;
+    color: var(--red);
+    margin-bottom: 3rem;
+    font-size: 4rem;
+	
+
+}
+
+.headinglink {
+    text-align: center;
+    color: var(--green);
+    margin-bottom: 3rem;
+    font-size: 3rem;
+}
+
+
+/* Movie container styles */
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Space out movie cards evenly */
+    align-items: flex-start; /* Align items at the start of the container */
+}
+
+.movie-card {
+    width: 100%;
+    max-width: 300px;
+    height: auto; /* Adjust height to accommodate content and image */
+    margin: 15px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 150px; /* Fixed height for the image */
+    display: block;
+    background-color: #000000; /* Background color for the image area */
+}
+
+.movie-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.movie-details {
+    padding: 15px;
+    flex: 1; /* Ensure details take up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space between title and additional info */
+    background-color: #1a1a1a; /* Background color for the details area */
+}
+
+.movie-details h3 {
+    font-size: 16px;
+    text-align: center;
+    color: #f4f2f5;
+    margin: 0; /* Remove margin to avoid extra spacing */
+}
+
+.movie-details p {
+    font-size: 12px;
+    margin: 5px 0;
+    color: #999;
+}
+
+/* Badge styles */
+.badge {
+    position: absolute;
+    background-color: #ff0000;
+    color: #fff;
+    padding: 5px;
+    font-size: 10px;
+    top: 10px;
+    left: 10px;
+    border-radius: 3px;
+}
+
+/* Movie container styles-----------------------------------------------Home */
+.home-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Space out movie cards evenly */
+    align-items: flex-start; /* Align items at the start of the container */
+}
+
+.home-card {
+    width: 100%;
+    max-width: ;
+    height: 100%; /* Adjust height to accommodate content and image */
+    
+	min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size: cover !important;
+    background-position: center !important;
+    justify-content: center;
+    padding: 2rem 9%;
+}
+
+.home-card img {
+    width: 100%;
+    height: 800px; /* Fixed height for the image */
+    display: block;
+    background-color: #000000; /* Background color for the image area */
+}
+
+.home-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.home-details {
+    padding: 15px;
+    flex: 1; /* Ensure details take up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space between title and additional info */
+    background-color: #1a1a1a; /* Background color for the details area */
+}
+
+.home-details h3 {
+    font-size: 32px;
+    text-align: center;
+    color: #f4f2f5;
+    margin: 0; /* Remove margin to avoid extra spacing */
+}
+
+.home-details p {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #999;
+}
+
+/* Badge styles */
+.badgehome {
+    position: absolute;
+    background-color: #ff0000;
+    color: #fff;
+    padding: 5px;
+    font-size: 10px;
+    top: 10px;
+    left: 10px;
+    border-radius: 3px;
+}
+
+.web-badge {
+    background-color: #ff6600;
+}
+
+/* Specific section styles */
+.home {
+    padding: 0;
+}
+
+.home .box {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size: cover !important;
+    background-position: center !important;
+    justify-content: flex-end;
+    padding: 2rem 9%;
+}
+
+.home .box.second {
+    justify-content: flex-end;
+}
+
+.home .box .content {
+    width: 50rem;
+}
+
+.home .box .content h3 {
+    font-size: 6rem;
+    color: #fff;
+    padding-top: .5rem;
+    text-transform: uppercase;
+}
+
+.home .box .content p {
+    line-height: 2;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.anime, .action, .child, .family {
+    padding: 5rem;
+}
+
+.anime .box, .action .box, .child .box, .family .box {
+    width: 100%;
+    max-width: 299px;
+    height: 168px;
+}
+
+.anime .content h3, .action .content h3, .child .content h3, .family .content h3 {
+    font-size: 1.7rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.anime .content p, .action .content p, .child .content p, .family .content p {
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.copyright .logo {
+    color: var(--red);
+    font-size: 2.1rem;
+    font-weight: bolder;
+}
+
+.copyright p {
+    font-size: 0.9rem;
+    color: var(--red);
+    font-size: 2rem;
+}
+
+.video-container video {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.about {
+    margin-top: 2rem;
+    color: #fff;
+}
+
+.about h2 {
+    display: inline-flex;
+    font-size: 2.4rem;
+    font-weight: 500;
+    border-bottom: 4px solid var(--red);
+    color: #ffffff;
+}
+
+.about p {
+    display: inline-flex;
+    font-size: 2rem;
+    color: #ffffff;
+    text-align: justify;
+    text-decoration: none;
+}
+
+.screenshots h2 {
+    display: inline-flex;
+    font-size: 2.4rem;
+    font-weight: 500;
+    border-bottom: 4px solid var(--red);
+    color: #ffffff;
+    margin-top: 1.6rem;
+}
+
+.screenshots-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    gap: 10px;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+}
+
+.screenshots-content img {
+    width: 100%;
+    height: 219.94px;
+    object-fit: cover;
+    margin-top: 1.6rem;
+}
+
+.download {
+    max-width: 800px;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.download h2 {
+    text-align: center;
+    font-size: 2.7rem;
+    font-weight: 500;
+    margin: 1.6rem 0;
+    color: #fff;
+}
+
+.downlod-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+.downlod-links a {
+    text-align: center;
+    background: var(--red);
+    padding: 12px 20px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 1.5rem; /* Corrected font-size */
+}
+
+.downlod-links a:hover {
+    background: var(--black);
+    color: var(--red);
+    transition: 0.3s all linear;
+}
+
+
+
+
+.counter-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+
+
+/* Media Queries */
+@media (max-width: 991px) {
     html {
-        font-size: 62.5%;
-        overflow-x: hidden;
-        scroll-padding-top: 5.5rem;
+        font-size: 55%;
     }
 
-    /* Header styles */
     header {
-        top: 0;
-        left: 0;
-        right: 0;
-        padding: 1rem 7%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        z-index: 10000;
-        position: fixed; /* Ensure header is fixed on top */
-        background: var(--black); /* Background to ensure visibility */
-        color: #fff; /* Ensure text is visible */
+        padding: 1rem 2rem;
     }
 
-    header .logo {
-        font-size: 2.5rem;
-        font-weight: bolder;
+    section {
+        padding: 2rem;
     }
 
-    header .logo i {
-        color: var(--red);
+    .home .box .content {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .home .box .content h3 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header .icons #menu-bars {
+        display: inline-block;
     }
 
     header .navbar {
-        display: flex;
-        align-items: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--black);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        border-bottom: .1rem solid rgba(0,0,0,.2);
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
 
     header .navbar a {
-        font-size: 1.7rem;
-        border-radius: .5rem;
-        padding: .5rem 1.5rem;
-        color: #fff;
-    }
-
-    header .navbar a.active,
-    header .navbar a:hover {
-        color: #fff;
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
         background: var(--red);
     }
 
-    header .icons i,
-    header .icons a {
-        cursor: pointer;
-        margin-left: .5rem;
-        height: 4.5rem;
-        line-height: 4.5rem;
-        width: 4.5rem;
-        text-align: center;
-        font-size: 1.7rem;
-        color: #fff;
-        border-radius: 50%;
-        background: var(--red);
-    }
-
-    header .icons i:hover,
-    header .icons a:hover {
-        color: var(--red);
-        background: #fff;
-        transform: rotate(360deg);
-    }
-
-    header .icons #menu-bars {
-        display: none;
-    }
-
-    /* Button styles */
-    .btn {
-        margin-top: 1rem;
-        display: inline-block;
-        font-size: 1.7rem;
-        color: #fff;
-        background: var(--red);
-        border-radius: .5rem;
-        cursor: pointer;
-        padding: .8rem 3rem;
-    }
-
-    .btn:hover {
-        background: var(--black);
-        color: var(--red);
-        letter-spacing: .1rem;
-    }
-
-    /* Section styles */
-    section {
-        padding: 2rem 9%;
-    }
-
-    section:nth-child(even) {
-        background: var(--light-color);
-    }
-
-    /* Heading styles */
-    .heading {
-        text-align: center;
-        color: var(--red);
-        margin-bottom: 3rem;
-        font-size: 4rem;
-    }
-
-    .headinglink {
-        text-align: center;
-        color: var(--green);
-        margin-bottom: 3rem;
-        font-size: 3rem;
-    }
-
-    /* Movie container styles */
-    .movie-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around; /* Space out movie cards evenly */
-        align-items: flex-start; /* Align items at the start of the container */
+    .home .box .content h3 {
+        font-size: 5rem;
     }
 
     .movie-card {
         width: 100%;
-        max-width: 300px;
-        height: auto; /* Adjust height to accommodate content and image */
-        margin: 15px;
-        background-color: #1a1a1a;
-        border-radius: 8px;
-        overflow: hidden;
-        transition: transform 0.3s;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .movie-card img {
-        width: 100%;
-        height: 150px; /* Fixed height for the image */
-        display: block;
-        background-color: #000000; /* Background color for the image area */
-    }
-
-    .movie-card:hover {
-        transform: scale(1.05); /* Slight zoom effect on hover */
-    }
-
-    .movie-details {
-        padding: 15px;
-        flex: 1; /* Ensure details take up remaining space */
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between; /* Distribute space between title and additional info */
-        background-color: #1a1a1a; /* Background color for the details area */
-    }
-
-    .movie-details h3 {
-        font-size: 16px;
-        text-align: center;
-        color: #f4f2f5;
-        margin: 0; /* Remove margin to avoid extra spacing */
-    }
-
-    .movie-details p {
-        font-size: 12px;
-        margin: 5px 0;
-        color: #999;
-    }
-
-    /* Badge styles */
-    .badge {
-        position: absolute;
-        background-color: #ff0000;
-        color: #fff;
-        padding: 5px;
-        font-size: 10px;
-        top: 10px;
-        left: 10px;
-        border-radius: 3px;
-    }
-
-    /* Movie container styles-----------------------------------------------Home */
-    .home-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around; /* Space out movie cards evenly */
-        align-items: flex-start; /* Align items at the start of the container */
-    }
-
-    .home-card {
-        width: 100%;
-        max-width: ;
-        height: 100%; /* Adjust height to accommodate content and image */
-        
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        background-size: cover !important;
-        background-position: center !important;
-        justify-content: center;
-        padding: 2rem 9%;
-    }
-
-    .home-card img {
-        width: 100%;
-        height: 800px; /* Fixed height for the image */
-        display: block;
-        background-color: #000000; /* Background color for the image area */
-    }
-
-    .home-card:hover {
-        transform: scale(1.05); /* Slight zoom effect on hover */
-    }
-
-    .home-details {
-        padding: 15px;
-        flex: 1; /* Ensure details take up remaining space */
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between; /* Distribute space between title and additional info */
-        background-color: #1a1a1a; /* Background color for the details area */
-    }
-
-    .home-details h3 {
-        font-size: 32px;
-        text-align: center;
-        color: #f4f2f5;
-        margin: 0; /* Remove margin to avoid extra spacing */
-    }
-
-    .home-details p {
-        font-size: 24px;
+        max-width: 100%;
         margin: 10px 0;
-        color: #999;
     }
+}
 
-    /* Badge styles */
-    .badgehome {
-        position: absolute;
-        background-color: #ff0000;
-        color: #fff;
-        padding: 5px;
-        font-size: 10px;
-        top: 10px;
-        left: 10px;
-        border-radius: 3px;
-    }
-
-    .web-badge {
-        background-color: #ff6600;
-    }
-
-    /* Specific section styles */
-    .home {
-        padding: 0;
-    }
-
-    .home .box {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        background-size: cover !important;
-        background-position: center !important;
-        justify-content: flex-end;
-        padding: 2rem 9%;
-    }
-
-    .home .box.second {
-        justify-content: flex-end;
-    }
-
-    .home .box .content {
-        width: 50rem;
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
     }
 
     .home .box .content h3 {
-        font-size: 6rem;
-        color: #fff;
-        padding-top: .5rem;
-        text-transform: uppercase;
+        font-size: 3rem;
     }
 
-    .home .box .content p {
-        line-height: 2;
-        color: #fff;
-        font-size: 1.5rem;
-        padding: 1rem 0;
+    .about h2, .screenshots h2, .download h2 {
+        font-size: 1.8rem;
     }
 
-    .anime, .action, .child, .family {
-        padding: 5rem;
+    .screenshots-content img {
+        height: auto;
     }
 
-    .anime .box, .action .box, .child .box, .family .box {
-        width: 100%;
-        max-width: 299px;
-        height: 168px;
-    }
-
-    .anime .content h3, .action .content h3, .child .content h3, .family .content h3 {
-        font-size: 24px;
-        color: #f4f2f5;
-    }
-
-    .anime .content p, .action .content p, .child .content p, .family .content p {
-        font-size: 14px;
-        color: #999;
+    .downlod-links {
+        grid-template-columns: 1fr;
     }
 }
